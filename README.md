@@ -1,0 +1,1 @@
+Built a real time delivery platform supporting 3 concurrent user roles (dispatcher, driver, customer) with live location broadcasting via WebSockets. The system uses Socket.io pub/sub for sub 100ms location updates, with a simulated driver movement engine that auto completes deliveries
