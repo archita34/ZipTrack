@@ -137,4 +137,5 @@ setInterval(() => {
   });
 }, 2000);
 
-httpServer.listen(3001, () => console.log('🚀 ParcelPilot server running on http://localhost:3001'));
+const PORT = process.env.PORT || 3001;
+httpServer.listen(PORT, () => console.log(`🚀 ParcelPilot server running on port ${PORT}`));
