@@ -5,10 +5,17 @@ import cors from 'cors';
 
 const app = express();
 const httpServer = createServer(app);
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://willowy-moxie-52422e.netlify.app'
+]
+
 const io = new Server(httpServer, {
-  cors: { origin: '*', methods: ['GET', 'POST'] }
+  cors: { origin: allowedOrigins, methods: ['GET', 'POST'] }
 });
-app.use(cors({ origin: '*' }));
+
+app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 // ── In-memory store ──
