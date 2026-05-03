@@ -2,7 +2,7 @@ import { useState } from 'react'
 import LiveMap from '../components/LiveMap'
 import OrderCard from '../components/OrderCard'
 
-const API = 'http://localhost:3001/api'
+const API = 'https://mindful-sparkle-production-f806.up.railway.app/api'
 
 export default function Dashboard({ orders, drivers }) {
   const [selected, setSelected] = useState(null)
